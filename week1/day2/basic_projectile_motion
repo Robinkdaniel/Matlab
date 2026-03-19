@@ -1,0 +1,28 @@
+clc;
+clear;
+close all;
+
+figure;  
+
+g = 9.81;
+v0 = 20;
+theta = deg2rad(45);
+t = 0:0.05:5;
+x = v0 * cos(theta) * t;
+y = v0 * sin(theta) * t - 0.5 * g * t.^2;
+y(y < 0) = 0;
+for i = 1:length(t)
+    plot(x(1:i), y(1:i), 'b', 'LineWidth', 2);
+    hold on;
+    plot(x(i), y(i), 'ro', 'MarkerFaceColor', 'r');
+    hold off;
+    xlabel('Distance');
+    ylabel('Height');
+    title('Projectile Motion');
+    grid on;
+    axis([0 max(x) 0 max(y)]);
+    drawnow;  
+    pause(0.05);
+end
+
+saveas(gcf, 'day2_output.png');
