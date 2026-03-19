@@ -1,0 +1,17 @@
+% DAY 1 - MATLAB BASICS
+
+clc;
+clear;
+close all;
+t = 0:0.1:10;
+sin_wave = sin(t);
+cos_wave = cos(t);
+figure;
+plot(t, sin_wave, 'b', 'LineWidth', 2);
+hold on;
+plot(t, cos_wave, 'r', 'LineWidth', 2);
+title('Sine and Cosine Waves');
+xlabel('Time');
+ylabel('Amplitude');
+legend('sin(t)', 'cos(t)');
+grid on; 
