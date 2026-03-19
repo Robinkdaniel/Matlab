@@ -1,0 +1,34 @@
+% diff angles - Projectile Motion Analysis
+
+clc;
+clear;
+close all;
+
+g = 9.81;
+v0 = 20;
+angles = [30, 45, 60];  
+
+t = 0:0.05:5;
+
+figure;
+hold on;
+
+for k = 1:length(angles)
+    
+    theta = deg2rad(angles(k));
+    
+    x = v0 * cos(theta) * t;
+    y = v0 * sin(theta) * t - 0.5 * g * t.^2;
+    
+    y(y < 0) = NaN;  
+    
+    plot(x, y, 'LineWidth', 2);
+    
+end
+
+xlabel('Distance (m)');
+ylabel('Height (m)');
+title('Projectile Motion for Different Angles');
+legend('30°', '45°', '60°');
+grid on;
+
