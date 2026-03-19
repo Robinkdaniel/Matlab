@@ -1,17 +1,35 @@
-% DAY 1 - MATLAB BASICS
+% DAY 1 
+%1. simple plot
 
 clc;
 clear;
 close all;
-t = 0:0.1:10;
-sin_wave = sin(t);
-cos_wave = cos(t);
-figure;
-plot(t, sin_wave, 'b', 'LineWidth', 2);
+figure(1);
+
+t1 = 0:0.1:10;
+x = sin(t1);
+y = cos(t1);
+subplot(2,1,1);  
+plot(t1, x, 'b', 'LineWidth', 2);
 hold on;
-plot(t, cos_wave, 'r', 'LineWidth', 2);
-title('Sine and Cosine Waves');
+plot(t1, y, 'r', 'LineWidth', 2);
+title('Basic Sine and Cosine');
 xlabel('Time');
 ylabel('Amplitude');
 legend('sin(t)', 'cos(t)');
-grid on; 
+grid on;
+
+%2. changing time period, amplitude, frequency etc
+
+t2 = 0:0.01:0.5;
+x = 2*sin(2*pi*5*t2);
+y = 2*cos(2*pi*10*t2);
+subplot(2,1,2);  
+plot(t2, x, 'b--', 'LineWidth', 2);
+hold on;
+plot(t2, y, 'r', 'LineWidth', 2);
+title('Modified Signals');
+xlabel('Time');
+ylabel('Amplitude');
+legend('sin(2πft)', 'cos(2πft)');
+grid on;
