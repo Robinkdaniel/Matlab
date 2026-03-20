@@ -1,0 +1,64 @@
+clc;
+clear;
+close all;
+
+n = -10:10;
+x = sin(0.3*pi*n);
+
+figure;
+
+% 1. Graphical Representation
+subplot(3,3,1);
+stem(n, x, 'filled');
+title('Graphical Representation');
+xlabel('n'); ylabel('x[n]');
+grid on;
+
+% 2. Functional Representation
+subplot(3,3,2);
+plot(n, x, 'LineWidth', 2);
+title('Functional Representation');
+xlabel('n'); ylabel('x[n]');
+grid on;
+
+% 3. Tabular Representation                             
+disp('Tabular Representation:');
+disp(table(n', x', 'VariableNames', {'n','x[n]'}));
+
+% 4. Sequence Representation
+subplot(3,3,3);
+stem(n, x, 'filled');
+title('Sequence Representation');
+xlabel('n'); ylabel('x[n]');
+grid on
+
+
+
+ % output of tab representation
+  Tabular Representation:
+     n        x[n]    
+    ___    ___________
+
+    -10    -3.6739e-16
+     -9       -0.80902
+     -8       -0.95106
+     -7       -0.30902
+     -6        0.58779
+     -5              1
+     -4        0.58779
+     -3       -0.30902
+     -2       -0.95106
+     -1       -0.80902
+      0              0
+      1        0.80902
+      2        0.95106
+      3        0.30902
+      4       -0.58779
+      5             -1
+      6       -0.58779
+      7        0.30902
+      8        0.95106
+      9        0.80902
+     10     3.6739e-16
+
+>> 
