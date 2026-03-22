@@ -1,0 +1,17 @@
+%shift
+
+clc:
+clear;
+close all;
+
+n = -5:5;
+x = sin(0.3**pi*n);
+stem(n, x); %stem is used for discrete while the plot() for continuous time signal.
+title(sin(0.3*pi*n);
+grid on;
+
+
+x_shift = sin(0.3*pi*(n-2));
+stem(n, x_shift, 'filled');
+title('shifted x(n-2)');
+grid on;
