@@ -1,0 +1,44 @@
+clc;
+clear;
+close all;
+
+t = -10:1:10;
+x1 = sin(0.3*pi*t);
+x2 = cos(0.3*pi*t);
+
+figure;
+
+subplot(2,2,1);
+plot(t, x1, 'b', 'linewidth', 2);
+title('signal 1');
+xlabel('Time');
+ylabel('Ampltude');
+grid on;
+
+subplot(2,2,2);
+plot(t, x2, 'b', 'linewidth',2);
+title('signal 2');
+xlabel('Time');
+ylabel('Ampltude');
+grid on;
+
+x3 = x1 + x2;
+
+subplot(2,2,3);
+plot(t, x3, 'b', 'linewidth', 2);
+title('Added Signals');
+xlabel('Time');
+ylabel('Ampltude');
+grid on;
+
+x4 = x1 .* x2;
+
+subplot(2,2,4);
+plot(t, x4, 'b', 'linewidth', 2);
+title('Added Signals');
+xlabel(Time);
+ylabel(Ampltude);
+grid on;
+
+
+
